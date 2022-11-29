@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    container_name: shopping-app
+    image: minhlee/shopping-app:latest
+    build:
+      context: .
+    ports:
+      - '3003:3000'
+    volumes:
+      - ./:/app
+      - /app/node_modules
